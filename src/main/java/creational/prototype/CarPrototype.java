@@ -2,7 +2,7 @@ package creational.prototype;
 
 import java.util.Hashtable;
 
-import bean.Car;
+import bean.Vehicle;
 import creational.singleton.Console;
 
 /**
@@ -10,13 +10,13 @@ import creational.singleton.Console;
  * @author ricardo
  *
  */
-public class CarPrototype<T extends Car> {
+public class CarPrototype<T extends Vehicle> {
 	
-	private static Hashtable<String, Car> carMap  = new Hashtable<String, Car>();
+	private static Hashtable<String, Vehicle> carMap  = new Hashtable<String, Vehicle>();
 	Console console = Console.getInstance();
 	
 	public void cloneCar(String index, T car) {
-		carMap.put(index, (Car) car.clone());
+		carMap.put(index, (Vehicle) car.clone());
 	}
 	
 	public void showCars() {

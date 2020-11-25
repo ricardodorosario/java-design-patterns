@@ -1,6 +1,6 @@
 package creational.abstractFactory;
 
-import bean.Car;
+import bean.Vehicle;
 import bean.Civic;
 import bean.Corolla;
 
@@ -13,12 +13,12 @@ import bean.Corolla;
 public class RetailFactory extends AbstractCarFactory{
 
 	@Override
-	public Car createCivic(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
+	public Vehicle createCivic(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
 		return new Civic(model, year, engine, isFourDoors, isAutomatic);
 	}
 
 	@Override
-	public Car createCorolla(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
+	public Vehicle createCorolla(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
 		return new Corolla(model, year, engine, isFourDoors, isAutomatic);
 	}
 }

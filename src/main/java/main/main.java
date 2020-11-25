@@ -1,10 +1,13 @@
 package main;
 
+import bean.Vehicle;
 import bean.Car;
 import bean.Civic;
 import bean.Corolla;
 import creational.prototype.CarPrototype;
 import creational.singleton.Console;
+import structural.bridge.CarPark;
+import structural.bridge.ParkManager;
 
 public class main {
 	public static void main(String[] args) {
@@ -50,12 +53,23 @@ public class main {
 		/**
 		 * Prototype
 		 */
-		CarPrototype<Car> cp = new CarPrototype<Car>();
-		Civic civic = new Civic("XL", "2020", "1.2", true, false);
-		Corolla corolla = new Corolla("SS", "2020", "1.1", false, false);
-		cp.cloneCar("1", civic);
-		cp.cloneCar("2", corolla);
-		cp.cloneCar("3", civic);
-		cp.showCars();
+		// CarPrototype<Vehicle> cp = new CarPrototype<Vehicle>();
+		// Civic civic = new Civic("XL", "2020", "1.2", true, false);
+		// Corolla corolla = new Corolla("SS", "2020", "1.1", false, false);
+		// cp.cloneCar("1", civic);
+		// cp.cloneCar("2", corolla);
+		// cp.cloneCar("3", civic);
+		// cp.showCars();
+		/**
+		 * Bridge
+		 */
+		CarPark carPark = new CarPark();
+		Car bmw = new Car("BMW", "XR", "2020", "1.0", true, true);
+		ParkManager pm = new ParkManager(carPark);
+		pm.park(new Civic("XR", "2020", "1.0", true, true));
+		pm.park(new Corolla("XR", "2020", "1.0", true, true));
+		pm.park(bmw);
+		pm.unpark(bmw);
+		pm.displayQtVehiclesParked();
 	}
 }

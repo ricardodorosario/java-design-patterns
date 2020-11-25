@@ -1,7 +1,7 @@
 package creational.factory;
 
 import bean.Civic;
-import bean.Car;
+import bean.Vehicle;
 
 /**
  * Fábrica de Civic
@@ -11,7 +11,7 @@ import bean.Car;
 public class CivicFactory extends CarFactory {
 
 	@Override
-	public Car create(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
+	public Vehicle create(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
 		return new Civic(model, year, engine, isFourDoors, isAutomatic);
 	}
  

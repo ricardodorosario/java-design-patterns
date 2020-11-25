@@ -1,6 +1,6 @@
 package creational.builder;
 
-import bean.Car;
+import bean.Vehicle;
 import bean.Civic;
 
 public class CivicBuilder extends AbstractCarBuilder {
@@ -35,7 +35,7 @@ public class CivicBuilder extends AbstractCarBuilder {
 	}
 
 	@Override
-	public Car getCar() {
+	public Vehicle getCar() {
 		return new Civic(this.model, "2020", this.engine, this.isFourDoors, this.isAutomatic);
 	}
 

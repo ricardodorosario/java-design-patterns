@@ -1,6 +1,6 @@
 package creational.factory;
 
-import bean.Car;
+import bean.Vehicle;
 
 /**
  * Fábrica abstrata de carros
@@ -9,5 +9,5 @@ import bean.Car;
  *
  */
 public abstract class CarFactory {
-	public abstract Car create(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic);
+	public abstract Vehicle create(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic);
 }

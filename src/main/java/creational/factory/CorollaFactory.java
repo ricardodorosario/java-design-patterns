@@ -1,6 +1,6 @@
 package creational.factory;
 
-import bean.Car;
+import bean.Vehicle;
 import bean.Corolla;
 
 /**
@@ -11,7 +11,7 @@ import bean.Corolla;
 public class CorollaFactory extends CarFactory {
 
 	@Override
-	public Car create(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
+	public Vehicle create(String model, String year, String engine, Boolean isFourDoors, Boolean isAutomatic) {
 		return new Corolla(model, year, engine, isFourDoors, isAutomatic);
 	}
 	

@@ -1,6 +1,6 @@
 package creational.builder;
 
-import bean.Car;
+import bean.Vehicle;
 
 public abstract class AbstractCarBuilder {
 	protected Boolean isFourDoors = false;
@@ -12,5 +12,5 @@ public abstract class AbstractCarBuilder {
 	abstract void setEngine(String engine);
 	abstract void setModel(String model);
 	abstract void setAutomatic(Boolean isAutomatic);
-	abstract Car getCar();
+	abstract Vehicle getCar();
 }
