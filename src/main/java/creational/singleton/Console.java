@@ -1,4 +1,4 @@
-package singleton;
+package creational.singleton;
 
 /**
  * Singleton: padrão que cria uma classe que é instanciável somente uma única vez. 
